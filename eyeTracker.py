@@ -5,6 +5,15 @@ import numpy as np;
 import utils;
 import cythonUtils as cutils;
 
+'''
+    This code is a implementation of the method proposed in the paper by Fabian Timm
+    http://www.inb.uni-luebeck.de/publikationen/pdfs/TiBa11b.pdf
+
+    The method used for calculating the point of the pupil is inspired from the
+    method by Tristan Hume.
+    https://github.com/trishume/eyeLike
+'''
+
 class eyeTracker(object):
     def __init__(self):
         pass;
