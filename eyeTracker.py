@@ -4,6 +4,7 @@ from imutils import face_utils;
 import numpy as np;
 import utils;
 import cythonUtils as cutils;
+from scipy.spatial import distance as dist;
 
 '''
     This code is a implementation of the method proposed in the paper by Fabian Timm
@@ -118,3 +119,47 @@ class eyeTracker(object):
         (x,y) = (maxLoc[0], maxLoc[1]);
         
         return (int(x/resizeRatio), int(y/resizeRatio));
+
+
+# Blink detection and processing code. The implementation of this
+# code is taken from https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/
+class eyeBlinkDetector(object):
+    def __init__(self, EAR_Threshold = 0.22, numberOfFramesForValidBlink = 1, onEyeBlinkFunction = None):
+        self._earThresh = EAR_Threshold;
+        self._validBlinkFrames = numberOfFramesForValidBlink;
+        self._onBlink = onEyeBlinkFunction;
+        self._eyeBlinkCounter = 0;
+        self._eyesClosed = False;
+
+
+    def onBlink(onBlinkFunction = None):
+        self._onBlink = onBlinkFunction;
+    
+    def _getEyeLandmarks(self,landmarksList):
+        (lStart, lEnd) = face_utils.FACIAL_LANDMARKS_IDXS["left_eye"]
+        (rStart, rEnd) = face_utils.FACIAL_LANDMARKS_IDXS["right_eye"]
+        leftEyeLandmarks = landmarksList[lStart : lEnd];
+        rightEyeLandmarks = landmarksList[rStart: rEnd];
+        return leftEyeLandmarks, rightEyeLandmarks;
+
+    def _calcEAR(self, eye):
+        A = dist.euclidean(eye[1], eye[5]);
+        B = dist.euclidean(eye[2], eye[4]);
+        C = dist.euclidean(eye[0], eye[3]);
+        ear = (A+B)/(C * 2.0);
+        return ear;
+
+    def detect(self, faceLandmarks):
+        (left, right) = self._getEyeLandmarks(faceLandmarks);
+        leftEAR = self._calcEAR(left);
+        rightEAR = self._calcEAR(right);
+        avgEAR = rightEAR + leftEAR;
+        avgEAR /= 2.0;
+        if avgEAR < self._earThresh:
+            self._eyeBlinkCounter += 1;
+        else:
+            if self._eyeBlinkCounter > self._validBlinkFrames:
+                if self._onBlink is not None:
+                    self._onBlink();
+                self._eyeBlinkCounter = 0;
+        

@@ -2297,7 +2297,7 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_calcGradientX(__Pyx_memviewslice
  *         out[y, w-1] = frame[y, w-1] - frame[y, w-2];
  *     return out;             # <<<<<<<<<<<<<<
  * 
- * cpdef double[:,:] testPossibleCenterFormula(int x,
+ * 
  */
   __PYX_INC_MEMVIEW(&__pyx_v_out, 0);
   __pyx_r = __pyx_v_out;
@@ -2447,8 +2447,8 @@ static PyObject *__pyx_pf_11cythonUtils_calcGradientX(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "cythonUtils.pyx":13
- *     return out;
+/* "cythonUtils.pyx":14
+ * 
  * 
  * cpdef double[:,:] testPossibleCenterFormula(int x,             # <<<<<<<<<<<<<<
  *                                             int y,
@@ -2489,7 +2489,7 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
   Py_ssize_t __pyx_t_22;
   __Pyx_RefNannySetupContext("testPossibleCenterFormula", 0);
 
-  /* "cythonUtils.pyx":22
+  /* "cythonUtils.pyx":23
  *                                             int w):
  * 
  *     cdef double dx = 0.0, dy = 0.0, magn = 0.0, dotProduct = 0.0;             # <<<<<<<<<<<<<<
@@ -2501,16 +2501,16 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
   __pyx_v_magn = 0.0;
   __pyx_v_dotProduct = 0.0;
 
-  /* "cythonUtils.pyx":24
+  /* "cythonUtils.pyx":25
  *     cdef double dx = 0.0, dy = 0.0, magn = 0.0, dotProduct = 0.0;
  * 
  *     for cy in range(0,h):             # <<<<<<<<<<<<<<
  *         for cx in range(0,w):
  *             if cx == x and cy == y:
  */
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_h); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_h); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_int_0);
   __Pyx_GIVEREF(__pyx_int_0);
@@ -2518,16 +2518,16 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
     __pyx_t_2 = __pyx_t_1; __Pyx_INCREF(__pyx_t_2); __pyx_t_3 = 0;
     __pyx_t_4 = NULL;
   } else {
-    __pyx_t_3 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 24, __pyx_L1_error)
+    __pyx_t_3 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 25, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 24, __pyx_L1_error)
+    __pyx_t_4 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 25, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -2535,17 +2535,17 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
       if (likely(PyList_CheckExact(__pyx_t_2))) {
         if (__pyx_t_3 >= PyList_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_3); __Pyx_INCREF(__pyx_t_1); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 24, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_3); __Pyx_INCREF(__pyx_t_1); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 25, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 25, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       } else {
         if (__pyx_t_3 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_3); __Pyx_INCREF(__pyx_t_1); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 24, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_3); __Pyx_INCREF(__pyx_t_1); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 25, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 25, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       }
@@ -2555,7 +2555,7 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 24, __pyx_L1_error)
+          else __PYX_ERR(0, 25, __pyx_L1_error)
         }
         break;
       }
@@ -2564,16 +2564,16 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
     __Pyx_XDECREF_SET(__pyx_v_cy, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "cythonUtils.pyx":25
+    /* "cythonUtils.pyx":26
  * 
  *     for cy in range(0,h):
  *         for cx in range(0,w):             # <<<<<<<<<<<<<<
  *             if cx == x and cy == y:
  *                 continue;
  */
-    __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_w); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 25, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_w); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 25, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 26, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_INCREF(__pyx_int_0);
     __Pyx_GIVEREF(__pyx_int_0);
@@ -2581,16 +2581,16 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_1);
     __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 25, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
       __pyx_t_5 = __pyx_t_1; __Pyx_INCREF(__pyx_t_5); __pyx_t_6 = 0;
       __pyx_t_7 = NULL;
     } else {
-      __pyx_t_6 = -1; __pyx_t_5 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 25, __pyx_L1_error)
+      __pyx_t_6 = -1; __pyx_t_5 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 26, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_7 = Py_TYPE(__pyx_t_5)->tp_iternext; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 25, __pyx_L1_error)
+      __pyx_t_7 = Py_TYPE(__pyx_t_5)->tp_iternext; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 26, __pyx_L1_error)
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     for (;;) {
@@ -2598,17 +2598,17 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
         if (likely(PyList_CheckExact(__pyx_t_5))) {
           if (__pyx_t_6 >= PyList_GET_SIZE(__pyx_t_5)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_1 = PyList_GET_ITEM(__pyx_t_5, __pyx_t_6); __Pyx_INCREF(__pyx_t_1); __pyx_t_6++; if (unlikely(0 < 0)) __PYX_ERR(0, 25, __pyx_L1_error)
+          __pyx_t_1 = PyList_GET_ITEM(__pyx_t_5, __pyx_t_6); __Pyx_INCREF(__pyx_t_1); __pyx_t_6++; if (unlikely(0 < 0)) __PYX_ERR(0, 26, __pyx_L1_error)
           #else
-          __pyx_t_1 = PySequence_ITEM(__pyx_t_5, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 25, __pyx_L1_error)
+          __pyx_t_1 = PySequence_ITEM(__pyx_t_5, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
           #endif
         } else {
           if (__pyx_t_6 >= PyTuple_GET_SIZE(__pyx_t_5)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_5, __pyx_t_6); __Pyx_INCREF(__pyx_t_1); __pyx_t_6++; if (unlikely(0 < 0)) __PYX_ERR(0, 25, __pyx_L1_error)
+          __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_5, __pyx_t_6); __Pyx_INCREF(__pyx_t_1); __pyx_t_6++; if (unlikely(0 < 0)) __PYX_ERR(0, 26, __pyx_L1_error)
           #else
-          __pyx_t_1 = PySequence_ITEM(__pyx_t_5, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 25, __pyx_L1_error)
+          __pyx_t_1 = PySequence_ITEM(__pyx_t_5, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
           #endif
         }
@@ -2618,7 +2618,7 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 25, __pyx_L1_error)
+            else __PYX_ERR(0, 26, __pyx_L1_error)
           }
           break;
         }
@@ -2627,35 +2627,35 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
       __Pyx_XDECREF_SET(__pyx_v_cx, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "cythonUtils.pyx":26
+      /* "cythonUtils.pyx":27
  *     for cy in range(0,h):
  *         for cx in range(0,w):
  *             if cx == x and cy == y:             # <<<<<<<<<<<<<<
  *                 continue;
  *             dx = x - cx;
  */
-      __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_x); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_x); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 27, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_9 = PyObject_RichCompare(__pyx_v_cx, __pyx_t_1, Py_EQ); __Pyx_XGOTREF(__pyx_t_9); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 26, __pyx_L1_error)
+      __pyx_t_9 = PyObject_RichCompare(__pyx_v_cx, __pyx_t_1, Py_EQ); __Pyx_XGOTREF(__pyx_t_9); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 27, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_10 = __Pyx_PyObject_IsTrue(__pyx_t_9); if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 26, __pyx_L1_error)
+      __pyx_t_10 = __Pyx_PyObject_IsTrue(__pyx_t_9); if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 27, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       if (__pyx_t_10) {
       } else {
         __pyx_t_8 = __pyx_t_10;
         goto __pyx_L8_bool_binop_done;
       }
-      __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_y); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 26, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_y); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 27, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_1 = PyObject_RichCompare(__pyx_v_cy, __pyx_t_9, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)
+      __pyx_t_1 = PyObject_RichCompare(__pyx_v_cy, __pyx_t_9, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 27, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __pyx_t_10 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 26, __pyx_L1_error)
+      __pyx_t_10 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 27, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_8 = __pyx_t_10;
       __pyx_L8_bool_binop_done:;
       if (__pyx_t_8) {
 
-        /* "cythonUtils.pyx":27
+        /* "cythonUtils.pyx":28
  *         for cx in range(0,w):
  *             if cx == x and cy == y:
  *                 continue;             # <<<<<<<<<<<<<<
@@ -2664,7 +2664,7 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
  */
         goto __pyx_L5_continue;
 
-        /* "cythonUtils.pyx":26
+        /* "cythonUtils.pyx":27
  *     for cy in range(0,h):
  *         for cx in range(0,w):
  *             if cx == x and cy == y:             # <<<<<<<<<<<<<<
@@ -2673,39 +2673,39 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
  */
       }
 
-      /* "cythonUtils.pyx":28
+      /* "cythonUtils.pyx":29
  *             if cx == x and cy == y:
  *                 continue;
  *             dx = x - cx;             # <<<<<<<<<<<<<<
  *             dy = y - cy;
  *             # normalize d
  */
-      __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_x); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 28, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_x); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 29, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_9 = PyNumber_Subtract(__pyx_t_1, __pyx_v_cx); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 28, __pyx_L1_error)
+      __pyx_t_9 = PyNumber_Subtract(__pyx_t_1, __pyx_v_cx); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 29, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_t_9); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 28, __pyx_L1_error)
+      __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_t_9); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 29, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_v_dx = __pyx_t_11;
 
-      /* "cythonUtils.pyx":29
+      /* "cythonUtils.pyx":30
  *                 continue;
  *             dx = x - cx;
  *             dy = y - cy;             # <<<<<<<<<<<<<<
  *             # normalize d
  *             magn = dx ** 2 + dy ** 2;
  */
-      __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_y); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 29, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_y); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 30, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_1 = PyNumber_Subtract(__pyx_t_9, __pyx_v_cy); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 29, __pyx_L1_error)
+      __pyx_t_1 = PyNumber_Subtract(__pyx_t_9, __pyx_v_cy); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 30, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 29, __pyx_L1_error)
+      __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 30, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_v_dy = __pyx_t_11;
 
-      /* "cythonUtils.pyx":31
+      /* "cythonUtils.pyx":32
  *             dy = y - cy;
  *             # normalize d
  *             magn = dx ** 2 + dy ** 2;             # <<<<<<<<<<<<<<
@@ -2714,7 +2714,7 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
  */
       __pyx_v_magn = (pow(__pyx_v_dx, 2.0) + pow(__pyx_v_dy, 2.0));
 
-      /* "cythonUtils.pyx":32
+      /* "cythonUtils.pyx":33
  *             # normalize d
  *             magn = dx ** 2 + dy ** 2;
  *             magn = magn ** 0.5;             # <<<<<<<<<<<<<<
@@ -2723,7 +2723,7 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
  */
       __pyx_v_magn = pow(__pyx_v_magn, 0.5);
 
-      /* "cythonUtils.pyx":33
+      /* "cythonUtils.pyx":34
  *             magn = dx ** 2 + dy ** 2;
  *             magn = magn ** 0.5;
  *             if magn == 0.0:             # <<<<<<<<<<<<<<
@@ -2733,7 +2733,7 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
       __pyx_t_8 = ((__pyx_v_magn == 0.0) != 0);
       if (__pyx_t_8) {
 
-        /* "cythonUtils.pyx":34
+        /* "cythonUtils.pyx":35
  *             magn = magn ** 0.5;
  *             if magn == 0.0:
  *                 dx = 0.0;             # <<<<<<<<<<<<<<
@@ -2742,7 +2742,7 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
  */
         __pyx_v_dx = 0.0;
 
-        /* "cythonUtils.pyx":35
+        /* "cythonUtils.pyx":36
  *             if magn == 0.0:
  *                 dx = 0.0;
  *                 dy = 0.0;             # <<<<<<<<<<<<<<
@@ -2751,7 +2751,7 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
  */
         __pyx_v_dy = 0.0;
 
-        /* "cythonUtils.pyx":33
+        /* "cythonUtils.pyx":34
  *             magn = dx ** 2 + dy ** 2;
  *             magn = magn ** 0.5;
  *             if magn == 0.0:             # <<<<<<<<<<<<<<
@@ -2761,7 +2761,7 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
         goto __pyx_L10;
       }
 
-      /* "cythonUtils.pyx":37
+      /* "cythonUtils.pyx":38
  *                 dy = 0.0;
  *             else:
  *                 dx /= magn;             # <<<<<<<<<<<<<<
@@ -2771,11 +2771,11 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
       /*else*/ {
         if (unlikely(__pyx_v_magn == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 37, __pyx_L1_error)
+          __PYX_ERR(0, 38, __pyx_L1_error)
         }
         __pyx_v_dx = (__pyx_v_dx / __pyx_v_magn);
 
-        /* "cythonUtils.pyx":38
+        /* "cythonUtils.pyx":39
  *             else:
  *                 dx /= magn;
  *                 dy /= magn;             # <<<<<<<<<<<<<<
@@ -2784,13 +2784,13 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
  */
         if (unlikely(__pyx_v_magn == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 38, __pyx_L1_error)
+          __PYX_ERR(0, 39, __pyx_L1_error)
         }
         __pyx_v_dy = (__pyx_v_dy / __pyx_v_magn);
       }
       __pyx_L10:;
 
-      /* "cythonUtils.pyx":39
+      /* "cythonUtils.pyx":40
  *                 dx /= magn;
  *                 dy /= magn;
  *             dotProduct = dx*gX + dy*gY;             # <<<<<<<<<<<<<<
@@ -2799,7 +2799,7 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
  */
       __pyx_v_dotProduct = ((__pyx_v_dx * __pyx_v_gX) + (__pyx_v_dy * __pyx_v_gY));
 
-      /* "cythonUtils.pyx":40
+      /* "cythonUtils.pyx":41
  *                 dy /= magn;
  *             dotProduct = dx*gX + dy*gY;
  *             dotProduct = max(0.0, dotProduct);             # <<<<<<<<<<<<<<
@@ -2815,15 +2815,15 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
       }
       __pyx_v_dotProduct = __pyx_t_13;
 
-      /* "cythonUtils.pyx":42
+      /* "cythonUtils.pyx":43
  *             dotProduct = max(0.0, dotProduct);
  * 
  *             out[cy,cx] += (dotProduct ** 2) * inv_eye[cy,cx];             # <<<<<<<<<<<<<<
  * 
  *     return out;
  */
-      __pyx_t_14 = __Pyx_PyIndex_AsSsize_t(__pyx_v_cy); if (unlikely((__pyx_t_14 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 42, __pyx_L1_error)
-      __pyx_t_15 = __Pyx_PyIndex_AsSsize_t(__pyx_v_cx); if (unlikely((__pyx_t_15 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 42, __pyx_L1_error)
+      __pyx_t_14 = __Pyx_PyIndex_AsSsize_t(__pyx_v_cy); if (unlikely((__pyx_t_14 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 43, __pyx_L1_error)
+      __pyx_t_15 = __Pyx_PyIndex_AsSsize_t(__pyx_v_cx); if (unlikely((__pyx_t_15 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 43, __pyx_L1_error)
       __pyx_t_16 = __pyx_t_14;
       __pyx_t_17 = __pyx_t_15;
       __pyx_t_18 = -1;
@@ -2837,10 +2837,10 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
       } else if (unlikely(__pyx_t_17 >= __pyx_v_inv_eye.shape[1])) __pyx_t_18 = 1;
       if (unlikely(__pyx_t_18 != -1)) {
         __Pyx_RaiseBufferIndexError(__pyx_t_18);
-        __PYX_ERR(0, 42, __pyx_L1_error)
+        __PYX_ERR(0, 43, __pyx_L1_error)
       }
-      __pyx_t_19 = __Pyx_PyIndex_AsSsize_t(__pyx_v_cy); if (unlikely((__pyx_t_19 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 42, __pyx_L1_error)
-      __pyx_t_20 = __Pyx_PyIndex_AsSsize_t(__pyx_v_cx); if (unlikely((__pyx_t_20 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 42, __pyx_L1_error)
+      __pyx_t_19 = __Pyx_PyIndex_AsSsize_t(__pyx_v_cy); if (unlikely((__pyx_t_19 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 43, __pyx_L1_error)
+      __pyx_t_20 = __Pyx_PyIndex_AsSsize_t(__pyx_v_cx); if (unlikely((__pyx_t_20 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 43, __pyx_L1_error)
       __pyx_t_21 = __pyx_t_19;
       __pyx_t_22 = __pyx_t_20;
       __pyx_t_18 = -1;
@@ -2854,11 +2854,11 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
       } else if (unlikely(__pyx_t_22 >= __pyx_v_out.shape[1])) __pyx_t_18 = 1;
       if (unlikely(__pyx_t_18 != -1)) {
         __Pyx_RaiseBufferIndexError(__pyx_t_18);
-        __PYX_ERR(0, 42, __pyx_L1_error)
+        __PYX_ERR(0, 43, __pyx_L1_error)
       }
       *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_out.data + __pyx_t_21 * __pyx_v_out.strides[0]) ) + __pyx_t_22 * __pyx_v_out.strides[1]) )) += (pow(__pyx_v_dotProduct, 2.0) * (*((unsigned char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_inv_eye.data + __pyx_t_16 * __pyx_v_inv_eye.strides[0]) ) + __pyx_t_17 * __pyx_v_inv_eye.strides[1]) ))));
 
-      /* "cythonUtils.pyx":25
+      /* "cythonUtils.pyx":26
  * 
  *     for cy in range(0,h):
  *         for cx in range(0,w):             # <<<<<<<<<<<<<<
@@ -2869,7 +2869,7 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
     }
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "cythonUtils.pyx":24
+    /* "cythonUtils.pyx":25
  *     cdef double dx = 0.0, dy = 0.0, magn = 0.0, dotProduct = 0.0;
  * 
  *     for cy in range(0,h):             # <<<<<<<<<<<<<<
@@ -2879,19 +2879,19 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_testPossibleCenterFormula(int __
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "cythonUtils.pyx":44
+  /* "cythonUtils.pyx":45
  *             out[cy,cx] += (dotProduct ** 2) * inv_eye[cy,cx];
  * 
  *     return out;             # <<<<<<<<<<<<<<
  * 
- * 
+ * '''
  */
   __PYX_INC_MEMVIEW(&__pyx_v_out, 0);
   __pyx_r = __pyx_v_out;
   goto __pyx_L0;
 
-  /* "cythonUtils.pyx":13
- *     return out;
+  /* "cythonUtils.pyx":14
+ * 
  * 
  * cpdef double[:,:] testPossibleCenterFormula(int x,             # <<<<<<<<<<<<<<
  *                                             int y,
@@ -2969,47 +2969,47 @@ static PyObject *__pyx_pw_11cythonUtils_3testPossibleCenterFormula(PyObject *__p
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_y)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("testPossibleCenterFormula", 1, 8, 8, 1); __PYX_ERR(0, 13, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("testPossibleCenterFormula", 1, 8, 8, 1); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_inv_eye)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("testPossibleCenterFormula", 1, 8, 8, 2); __PYX_ERR(0, 13, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("testPossibleCenterFormula", 1, 8, 8, 2); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_gX)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("testPossibleCenterFormula", 1, 8, 8, 3); __PYX_ERR(0, 13, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("testPossibleCenterFormula", 1, 8, 8, 3); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_gY)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("testPossibleCenterFormula", 1, 8, 8, 4); __PYX_ERR(0, 13, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("testPossibleCenterFormula", 1, 8, 8, 4); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_out)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("testPossibleCenterFormula", 1, 8, 8, 5); __PYX_ERR(0, 13, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("testPossibleCenterFormula", 1, 8, 8, 5); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
         if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_h)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("testPossibleCenterFormula", 1, 8, 8, 6); __PYX_ERR(0, 13, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("testPossibleCenterFormula", 1, 8, 8, 6); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
         if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_w)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("testPossibleCenterFormula", 1, 8, 8, 7); __PYX_ERR(0, 13, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("testPossibleCenterFormula", 1, 8, 8, 7); __PYX_ERR(0, 14, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "testPossibleCenterFormula") < 0)) __PYX_ERR(0, 13, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "testPossibleCenterFormula") < 0)) __PYX_ERR(0, 14, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 8) {
       goto __pyx_L5_argtuple_error;
@@ -3023,18 +3023,18 @@ static PyObject *__pyx_pw_11cythonUtils_3testPossibleCenterFormula(PyObject *__p
       values[6] = PyTuple_GET_ITEM(__pyx_args, 6);
       values[7] = PyTuple_GET_ITEM(__pyx_args, 7);
     }
-    __pyx_v_x = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_x == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 13, __pyx_L3_error)
-    __pyx_v_y = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_y == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
-    __pyx_v_inv_eye = __Pyx_PyObject_to_MemoryviewSlice_dsds_unsigned_char(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_inv_eye.memview)) __PYX_ERR(0, 15, __pyx_L3_error)
-    __pyx_v_gX = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_gX == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
-    __pyx_v_gY = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_gY == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
-    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[5], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 18, __pyx_L3_error)
-    __pyx_v_h = __Pyx_PyInt_As_int(values[6]); if (unlikely((__pyx_v_h == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 19, __pyx_L3_error)
-    __pyx_v_w = __Pyx_PyInt_As_int(values[7]); if (unlikely((__pyx_v_w == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 20, __pyx_L3_error)
+    __pyx_v_x = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_x == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
+    __pyx_v_y = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_y == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 15, __pyx_L3_error)
+    __pyx_v_inv_eye = __Pyx_PyObject_to_MemoryviewSlice_dsds_unsigned_char(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_inv_eye.memview)) __PYX_ERR(0, 16, __pyx_L3_error)
+    __pyx_v_gX = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_gX == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
+    __pyx_v_gY = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_gY == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 18, __pyx_L3_error)
+    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[5], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 19, __pyx_L3_error)
+    __pyx_v_h = __Pyx_PyInt_As_int(values[6]); if (unlikely((__pyx_v_h == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 20, __pyx_L3_error)
+    __pyx_v_w = __Pyx_PyInt_As_int(values[7]); if (unlikely((__pyx_v_w == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 21, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("testPossibleCenterFormula", 1, 8, 8, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 13, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("testPossibleCenterFormula", 1, 8, 8, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 14, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("cythonUtils.testPossibleCenterFormula", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -3054,10 +3054,10 @@ static PyObject *__pyx_pf_11cythonUtils_2testPossibleCenterFormula(CYTHON_UNUSED
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("testPossibleCenterFormula", 0);
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_inv_eye.memview)) { __Pyx_RaiseUnboundLocalError("inv_eye"); __PYX_ERR(0, 13, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 13, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_f_11cythonUtils_testPossibleCenterFormula(__pyx_v_x, __pyx_v_y, __pyx_v_inv_eye, __pyx_v_gX, __pyx_v_gY, __pyx_v_out, __pyx_v_h, __pyx_v_w, 0); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(0, 13, __pyx_L1_error)
-  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_1, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 13, __pyx_L1_error)
+  if (unlikely(!__pyx_v_inv_eye.memview)) { __Pyx_RaiseUnboundLocalError("inv_eye"); __PYX_ERR(0, 14, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 14, __pyx_L1_error) }
+  __pyx_t_1 = __pyx_f_11cythonUtils_testPossibleCenterFormula(__pyx_v_x, __pyx_v_y, __pyx_v_inv_eye, __pyx_v_gX, __pyx_v_gY, __pyx_v_out, __pyx_v_h, __pyx_v_w, 0); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_1, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __PYX_XDEC_MEMVIEW(&__pyx_t_1, 1);
   __pyx_t_1.memview = NULL;
@@ -3080,9 +3080,9 @@ static PyObject *__pyx_pf_11cythonUtils_2testPossibleCenterFormula(CYTHON_UNUSED
   return __pyx_r;
 }
 
-/* "cythonUtils.pyx":48
- * 
- * 
+/* "cythonUtils.pyx":52
+ *     https://github.com/trishume/eyeLike
+ * '''
  * cpdef double[:,:] findEyeCenter(unsigned char [:,:] inv_eye,             # <<<<<<<<<<<<<<
  *                                 double[:,:] gx,
  *                                 double[:,:] gy,
@@ -3118,7 +3118,7 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_findEyeCenter(__Pyx_memviewslice
   __Pyx_RefNannySetupContext("findEyeCenter", 0);
   __PYX_INC_MEMVIEW(&__pyx_v_out, 1);
 
-  /* "cythonUtils.pyx":55
+  /* "cythonUtils.pyx":59
  *                                 int frameWidth,
  *                                 double[:,:] out):
  *     h = frameHeight;             # <<<<<<<<<<<<<<
@@ -3127,7 +3127,7 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_findEyeCenter(__Pyx_memviewslice
  */
   __pyx_v_h = __pyx_v_frameHeight;
 
-  /* "cythonUtils.pyx":56
+  /* "cythonUtils.pyx":60
  *                                 double[:,:] out):
  *     h = frameHeight;
  *     w = frameWidth;             # <<<<<<<<<<<<<<
@@ -3136,7 +3136,7 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_findEyeCenter(__Pyx_memviewslice
  */
   __pyx_v_w = __pyx_v_frameWidth;
 
-  /* "cythonUtils.pyx":57
+  /* "cythonUtils.pyx":61
  *     h = frameHeight;
  *     w = frameWidth;
  *     for y in range(0,h):             # <<<<<<<<<<<<<<
@@ -3148,7 +3148,7 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_findEyeCenter(__Pyx_memviewslice
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_y = __pyx_t_3;
 
-    /* "cythonUtils.pyx":58
+    /* "cythonUtils.pyx":62
  *     w = frameWidth;
  *     for y in range(0,h):
  *         for x in range(0,w):             # <<<<<<<<<<<<<<
@@ -3160,7 +3160,7 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_findEyeCenter(__Pyx_memviewslice
     for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_5; __pyx_t_6+=1) {
       __pyx_v_x = __pyx_t_6;
 
-      /* "cythonUtils.pyx":59
+      /* "cythonUtils.pyx":63
  *     for y in range(0,h):
  *         for x in range(0,w):
  *             gX = gx[y,x];             # <<<<<<<<<<<<<<
@@ -3180,14 +3180,14 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_findEyeCenter(__Pyx_memviewslice
       } else if (unlikely(__pyx_t_8 >= __pyx_v_gx.shape[1])) __pyx_t_9 = 1;
       if (unlikely(__pyx_t_9 != -1)) {
         __Pyx_RaiseBufferIndexError(__pyx_t_9);
-        __PYX_ERR(0, 59, __pyx_L1_error)
+        __PYX_ERR(0, 63, __pyx_L1_error)
       }
-      __pyx_t_10 = PyFloat_FromDouble((*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_gx.data + __pyx_t_7 * __pyx_v_gx.strides[0]) ) + __pyx_t_8 * __pyx_v_gx.strides[1]) )))); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 59, __pyx_L1_error)
+      __pyx_t_10 = PyFloat_FromDouble((*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_gx.data + __pyx_t_7 * __pyx_v_gx.strides[0]) ) + __pyx_t_8 * __pyx_v_gx.strides[1]) )))); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 63, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_10);
       __Pyx_XDECREF_SET(__pyx_v_gX, __pyx_t_10);
       __pyx_t_10 = 0;
 
-      /* "cythonUtils.pyx":60
+      /* "cythonUtils.pyx":64
  *         for x in range(0,w):
  *             gX = gx[y,x];
  *             gY = gy[y,x];             # <<<<<<<<<<<<<<
@@ -3207,38 +3207,38 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_findEyeCenter(__Pyx_memviewslice
       } else if (unlikely(__pyx_t_12 >= __pyx_v_gy.shape[1])) __pyx_t_9 = 1;
       if (unlikely(__pyx_t_9 != -1)) {
         __Pyx_RaiseBufferIndexError(__pyx_t_9);
-        __PYX_ERR(0, 60, __pyx_L1_error)
+        __PYX_ERR(0, 64, __pyx_L1_error)
       }
-      __pyx_t_10 = PyFloat_FromDouble((*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_gy.data + __pyx_t_11 * __pyx_v_gy.strides[0]) ) + __pyx_t_12 * __pyx_v_gy.strides[1]) )))); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 60, __pyx_L1_error)
+      __pyx_t_10 = PyFloat_FromDouble((*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_gy.data + __pyx_t_11 * __pyx_v_gy.strides[0]) ) + __pyx_t_12 * __pyx_v_gy.strides[1]) )))); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 64, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_10);
       __Pyx_XDECREF_SET(__pyx_v_gY, __pyx_t_10);
       __pyx_t_10 = 0;
 
-      /* "cythonUtils.pyx":61
+      /* "cythonUtils.pyx":65
  *             gX = gx[y,x];
  *             gY = gy[y,x];
  *             if gX == 0.0 and gY == 0.0:             # <<<<<<<<<<<<<<
  *                 continue;
  *             out = testPossibleCenterFormula(x, y, inv_eye, gX, gY, out, h, w);
  */
-      __pyx_t_10 = __Pyx_PyFloat_EqObjC(__pyx_v_gX, __pyx_float_0_0, 0.0, 0); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 61, __pyx_L1_error)
+      __pyx_t_10 = __Pyx_PyFloat_EqObjC(__pyx_v_gX, __pyx_float_0_0, 0.0, 0); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 65, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_10);
-      __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_10); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 61, __pyx_L1_error)
+      __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_10); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 65, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       if (__pyx_t_14) {
       } else {
         __pyx_t_13 = __pyx_t_14;
         goto __pyx_L8_bool_binop_done;
       }
-      __pyx_t_10 = __Pyx_PyFloat_EqObjC(__pyx_v_gY, __pyx_float_0_0, 0.0, 0); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 61, __pyx_L1_error)
+      __pyx_t_10 = __Pyx_PyFloat_EqObjC(__pyx_v_gY, __pyx_float_0_0, 0.0, 0); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 65, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_10);
-      __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_10); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 61, __pyx_L1_error)
+      __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_10); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 65, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       __pyx_t_13 = __pyx_t_14;
       __pyx_L8_bool_binop_done:;
       if (__pyx_t_13) {
 
-        /* "cythonUtils.pyx":62
+        /* "cythonUtils.pyx":66
  *             gY = gy[y,x];
  *             if gX == 0.0 and gY == 0.0:
  *                 continue;             # <<<<<<<<<<<<<<
@@ -3247,7 +3247,7 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_findEyeCenter(__Pyx_memviewslice
  */
         goto __pyx_L5_continue;
 
-        /* "cythonUtils.pyx":61
+        /* "cythonUtils.pyx":65
  *             gX = gx[y,x];
  *             gY = gy[y,x];
  *             if gX == 0.0 and gY == 0.0:             # <<<<<<<<<<<<<<
@@ -3256,16 +3256,16 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_findEyeCenter(__Pyx_memviewslice
  */
       }
 
-      /* "cythonUtils.pyx":63
+      /* "cythonUtils.pyx":67
  *             if gX == 0.0 and gY == 0.0:
  *                 continue;
  *             out = testPossibleCenterFormula(x, y, inv_eye, gX, gY, out, h, w);             # <<<<<<<<<<<<<<
  * 
  *     return out;
  */
-      __pyx_t_15 = __pyx_PyFloat_AsDouble(__pyx_v_gX); if (unlikely((__pyx_t_15 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 63, __pyx_L1_error)
-      __pyx_t_16 = __pyx_PyFloat_AsDouble(__pyx_v_gY); if (unlikely((__pyx_t_16 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 63, __pyx_L1_error)
-      __pyx_t_17 = __pyx_f_11cythonUtils_testPossibleCenterFormula(__pyx_v_x, __pyx_v_y, __pyx_v_inv_eye, __pyx_t_15, __pyx_t_16, __pyx_v_out, __pyx_v_h, __pyx_v_w, 0); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 63, __pyx_L1_error)
+      __pyx_t_15 = __pyx_PyFloat_AsDouble(__pyx_v_gX); if (unlikely((__pyx_t_15 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 67, __pyx_L1_error)
+      __pyx_t_16 = __pyx_PyFloat_AsDouble(__pyx_v_gY); if (unlikely((__pyx_t_16 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 67, __pyx_L1_error)
+      __pyx_t_17 = __pyx_f_11cythonUtils_testPossibleCenterFormula(__pyx_v_x, __pyx_v_y, __pyx_v_inv_eye, __pyx_t_15, __pyx_t_16, __pyx_v_out, __pyx_v_h, __pyx_v_w, 0); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 67, __pyx_L1_error)
       __PYX_XDEC_MEMVIEW(&__pyx_v_out, 1);
       __pyx_v_out = __pyx_t_17;
       __pyx_t_17.memview = NULL;
@@ -3274,20 +3274,18 @@ static __Pyx_memviewslice __pyx_f_11cythonUtils_findEyeCenter(__Pyx_memviewslice
     }
   }
 
-  /* "cythonUtils.pyx":65
+  /* "cythonUtils.pyx":69
  *             out = testPossibleCenterFormula(x, y, inv_eye, gX, gY, out, h, w);
  * 
  *     return out;             # <<<<<<<<<<<<<<
- * 
- * 
  */
   __PYX_INC_MEMVIEW(&__pyx_v_out, 0);
   __pyx_r = __pyx_v_out;
   goto __pyx_L0;
 
-  /* "cythonUtils.pyx":48
- * 
- * 
+  /* "cythonUtils.pyx":52
+ *     https://github.com/trishume/eyeLike
+ * '''
  * cpdef double[:,:] findEyeCenter(unsigned char [:,:] inv_eye,             # <<<<<<<<<<<<<<
  *                                 double[:,:] gx,
  *                                 double[:,:] gy,
@@ -3360,41 +3358,41 @@ static PyObject *__pyx_pw_11cythonUtils_5findEyeCenter(PyObject *__pyx_self, PyO
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_gx)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("findEyeCenter", 1, 7, 7, 1); __PYX_ERR(0, 48, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("findEyeCenter", 1, 7, 7, 1); __PYX_ERR(0, 52, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_gy)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("findEyeCenter", 1, 7, 7, 2); __PYX_ERR(0, 48, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("findEyeCenter", 1, 7, 7, 2); __PYX_ERR(0, 52, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_magn)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("findEyeCenter", 1, 7, 7, 3); __PYX_ERR(0, 48, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("findEyeCenter", 1, 7, 7, 3); __PYX_ERR(0, 52, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_frameHeight)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("findEyeCenter", 1, 7, 7, 4); __PYX_ERR(0, 48, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("findEyeCenter", 1, 7, 7, 4); __PYX_ERR(0, 52, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_frameWidth)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("findEyeCenter", 1, 7, 7, 5); __PYX_ERR(0, 48, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("findEyeCenter", 1, 7, 7, 5); __PYX_ERR(0, 52, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
         if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_out)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("findEyeCenter", 1, 7, 7, 6); __PYX_ERR(0, 48, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("findEyeCenter", 1, 7, 7, 6); __PYX_ERR(0, 52, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "findEyeCenter") < 0)) __PYX_ERR(0, 48, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "findEyeCenter") < 0)) __PYX_ERR(0, 52, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 7) {
       goto __pyx_L5_argtuple_error;
@@ -3407,17 +3405,17 @@ static PyObject *__pyx_pw_11cythonUtils_5findEyeCenter(PyObject *__pyx_self, PyO
       values[5] = PyTuple_GET_ITEM(__pyx_args, 5);
       values[6] = PyTuple_GET_ITEM(__pyx_args, 6);
     }
-    __pyx_v_inv_eye = __Pyx_PyObject_to_MemoryviewSlice_dsds_unsigned_char(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_inv_eye.memview)) __PYX_ERR(0, 48, __pyx_L3_error)
-    __pyx_v_gx = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_gx.memview)) __PYX_ERR(0, 49, __pyx_L3_error)
-    __pyx_v_gy = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_gy.memview)) __PYX_ERR(0, 50, __pyx_L3_error)
-    __pyx_v_magn = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_magn.memview)) __PYX_ERR(0, 51, __pyx_L3_error)
-    __pyx_v_frameHeight = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_frameHeight == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 52, __pyx_L3_error)
-    __pyx_v_frameWidth = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_frameWidth == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 53, __pyx_L3_error)
-    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[6], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 54, __pyx_L3_error)
+    __pyx_v_inv_eye = __Pyx_PyObject_to_MemoryviewSlice_dsds_unsigned_char(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_inv_eye.memview)) __PYX_ERR(0, 52, __pyx_L3_error)
+    __pyx_v_gx = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_gx.memview)) __PYX_ERR(0, 53, __pyx_L3_error)
+    __pyx_v_gy = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_gy.memview)) __PYX_ERR(0, 54, __pyx_L3_error)
+    __pyx_v_magn = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_magn.memview)) __PYX_ERR(0, 55, __pyx_L3_error)
+    __pyx_v_frameHeight = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_frameHeight == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 56, __pyx_L3_error)
+    __pyx_v_frameWidth = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_frameWidth == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 57, __pyx_L3_error)
+    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[6], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 58, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("findEyeCenter", 1, 7, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 48, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("findEyeCenter", 1, 7, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 52, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("cythonUtils.findEyeCenter", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -3437,13 +3435,13 @@ static PyObject *__pyx_pf_11cythonUtils_4findEyeCenter(CYTHON_UNUSED PyObject *_
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("findEyeCenter", 0);
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_inv_eye.memview)) { __Pyx_RaiseUnboundLocalError("inv_eye"); __PYX_ERR(0, 48, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_gx.memview)) { __Pyx_RaiseUnboundLocalError("gx"); __PYX_ERR(0, 48, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_gy.memview)) { __Pyx_RaiseUnboundLocalError("gy"); __PYX_ERR(0, 48, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_magn.memview)) { __Pyx_RaiseUnboundLocalError("magn"); __PYX_ERR(0, 48, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 48, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_f_11cythonUtils_findEyeCenter(__pyx_v_inv_eye, __pyx_v_gx, __pyx_v_gy, __pyx_v_magn, __pyx_v_frameHeight, __pyx_v_frameWidth, __pyx_v_out, 0); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(0, 48, __pyx_L1_error)
-  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_1, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 48, __pyx_L1_error)
+  if (unlikely(!__pyx_v_inv_eye.memview)) { __Pyx_RaiseUnboundLocalError("inv_eye"); __PYX_ERR(0, 52, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_gx.memview)) { __Pyx_RaiseUnboundLocalError("gx"); __PYX_ERR(0, 52, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_gy.memview)) { __Pyx_RaiseUnboundLocalError("gy"); __PYX_ERR(0, 52, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_magn.memview)) { __Pyx_RaiseUnboundLocalError("magn"); __PYX_ERR(0, 52, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 52, __pyx_L1_error) }
+  __pyx_t_1 = __pyx_f_11cythonUtils_findEyeCenter(__pyx_v_inv_eye, __pyx_v_gx, __pyx_v_gy, __pyx_v_magn, __pyx_v_frameHeight, __pyx_v_frameWidth, __pyx_v_out, 0); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_1, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 52, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __PYX_XDEC_MEMVIEW(&__pyx_t_1, 1);
   __pyx_t_1.memview = NULL;

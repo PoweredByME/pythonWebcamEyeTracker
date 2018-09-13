@@ -6,7 +6,7 @@ import os;
 
 os.system("python cythonizer.py build_ext --inplace");
 
-def myFrameFunction(cam, disp, fld, et):
+def myFrameFunction(cam, disp, fld, et, eb):
     ''' 
         This function capture a frame from the video stream and
         do required processing on it and then display it.
@@ -21,6 +21,7 @@ def myFrameFunction(cam, disp, fld, et):
         x,y,w,h = face;
         et.setParameters(frame, face, landmarks);
         ((lx,ly),(rx,ry)) = et.Process();
+        eb.detect(landmarks);
         cv2.circle(frame, (lx, ly), 4, (0,0,255), -1);
         cv2.circle(frame, (rx, ry), 4, (0,0,255), -1);
 
@@ -28,7 +29,8 @@ def myFrameFunction(cam, disp, fld, et):
             
 
 
-
+def onEyeBlink():
+    print "Eye blinked";
 
 
 
@@ -39,9 +41,10 @@ def main():
     disp = display.Display();
     fld = faceLandmarkDetector.faceLandmarkDetector();
     et = eyeTracker.eyeTracker();
+    eb = eyeTracker.eyeBlinkDetector(onEyeBlinkFunction=onEyeBlink);
 
     while cam.isVideoSourceAvaiable():
-        myFrameFunction(cam, disp, fld, et);
+        myFrameFunction(cam, disp, fld, et, eb);
         if utils.CV_isButtonPressed("q"):
             break;
 
